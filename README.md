@@ -1,8 +1,8 @@
-\# Orion
+# Orion
 
 
 
-\[!\[License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+[!\[License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 
 
@@ -10,7 +10,7 @@ OrionはREON POCKET TAGのウェアラブルデバイス向け非公式アプリ
 
 
 
-\## 開発状況
+## 開発状況
 
 | プラットフォーム | 進捗 |
 
