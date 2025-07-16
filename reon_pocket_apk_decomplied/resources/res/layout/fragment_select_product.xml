@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14sp" android:textColor="@color/C1" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="24dp" android:text="@string/pairing_start_choice_description"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/originalArea" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:layout_width="160dp" android:layout_height="120dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:src="0x7f08012b" android:scaleType="centerCrop" android:layout_marginStart="0dp" android:layout_marginEnd="4dp"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:id="@+id/originalDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pairing_start_title_original" android:layout_marginEnd="16dp" style="@style/CustomListNoTitle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/proArea" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:layout_width="160dp" android:layout_height="120dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:src="0x7f08012c" android:scaleType="centerCrop" android:layout_marginStart="0dp" android:layout_marginEnd="4dp"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:id="@+id/proDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pairing_start_title_pro" android:layout_marginEnd="16dp" style="@style/CustomListNoTitle"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

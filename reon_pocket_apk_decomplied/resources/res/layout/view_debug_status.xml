@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/debugStatusViewLinearLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="5dp">
+        <TextView android:textSize="10dp" android:id="@+id/tecTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TecTemp xx" android:singleLine="true"/>
+        <Space android:layout_width="5dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="10dp" android:id="@+id/finTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FinTemp xx" android:singleLine="true"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="5dp">
+        <TextView android:textSize="10dp" android:id="@+id/clothesTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CloTemp xx" android:singleLine="true"/>
+        <Space android:layout_width="5dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="10dp" android:id="@+id/clothesHumi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CloHumi xx" android:singleLine="true"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="5dp">
+        <TextView android:textSize="10sp" android:id="@+id/peltier_output" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Peltier : xxx W" android:singleLine="true"/>
+        <Space android:layout_width="5dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="10sp" android:id="@+id/fan_output" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fan: x %" android:singleLine="true"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="5dp">
+        <TextView android:textSize="10sp" android:id="@+id/tagALS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TagALS: xx" android:singleLine="true"/>
+        <Space android:layout_width="5dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="10sp" android:id="@+id/tagPS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TagPS: xx" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>

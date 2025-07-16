@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/contentView" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/informationBottomMargin" android:text="@string/welcome_dialog_eula_pp_changed_title" style="@style/NotificationSubtitle"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:id="@+id/description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/informationBottomMargin" android:text="@string/welcome_dialog_eula_pp_changed_description" style="@style/NotificationDescription"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:textSize="20sp" android:textColor="@color/PrimaryText" android:layout_gravity="center_horizontal" android:id="@+id/ok_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18dp" android:text="@string/common_ok" android:backgroundTint="@color/colorTransparent" style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>

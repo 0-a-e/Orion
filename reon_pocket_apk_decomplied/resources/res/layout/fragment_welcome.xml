@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="@dimen/welcomePageBottomPadding" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/welcomePageSidePadding" android:paddingEnd="@dimen/welcomePageSidePadding">
+            <androidx.appcompat.widget.AppCompatImageView android:layout_width="@dimen/welcomeImageWidth" android:layout_height="@dimen/welcomeImageHeight" android:src="0x7f080121"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="@dimen/welcomeTitleTextSize" android:textColor="@color/colorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcomeTitleTopMargin" android:text="@string/welcome_title"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="@dimen/welcomeDescriptionTextSize" android:textColor="@color/colorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcomeDescriptionTopMargin" android:text="@string/welcome_description" android:textAlignment="center"/>
+            <Space android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textColor="@color/colorPrimaryText" android:id="@+id/welcome_confirm" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcomeConfirmTopMargin" android:text="confirm" android:textAlignment="center"/>
+            <FrameLayout android:gravity="left|center_vertical|center_horizontal|center|start" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/welcomeConfirmLayoutHeight" android:layout_marginTop="@dimen/welcomeCheckboxTopMargin">
+                <CheckBox android:textSize="@dimen/welcomeConfirmTextSize" android:textColor="@color/colorPrimaryText" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/welcome_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/welcome_agreement" android:layout_marginStart="@dimen/welcomeConfirmCheckboxStartMargin"/>
+            </FrameLayout>
+            <jp.co.sony.reonpocket.view.CustomFontButton android:enabled="false" android:id="@+id/acceptBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/welcomeButtonTopMargin" android:maxWidth="@dimen/welcomeButtonMaxWidth" android:text="@string/welcome_agreement_button"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

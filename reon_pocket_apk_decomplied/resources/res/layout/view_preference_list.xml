@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingStart="@dimen/listItemPaddingLr" android:paddingEnd="@dimen/listItemPaddingLr">
+        <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="@dimen/listItemTextSize" android:textColor="@color/colorPrimaryText" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/listTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="@dimen/listItemTextSize" android:textColor="@color/colorSecondaryText" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/listValue" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <ImageView android:background="@drawable/img_divider" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

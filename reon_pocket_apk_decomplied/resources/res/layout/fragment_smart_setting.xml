@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#80000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:id="@+id/smart_setting_space" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_smart_mode_setting" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="14sp" android:textColor="@color/PrimaryText" android:id="@+id/smart_setting_desc" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mainview_smart_favorite_description" android:layout_weight="1"/>
+            <jp.co.sony.reonpocket.view.CustomFontButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/AccentColorCool" android:layout_gravity="end" android:id="@+id/do_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0dp" android:text="@string/common_done" android:insetTop="0dp" android:insetBottom="0dp" android:layout_marginStart="16dp" style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+        <NumberPicker android:theme="@style/SmartPreferencePickerStyle" android:id="@+id/numberPicker" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

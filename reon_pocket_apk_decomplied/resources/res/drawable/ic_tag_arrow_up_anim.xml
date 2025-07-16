@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/$ic_tag_arrow_up_anim__0">
+    <target android:name="path_top" android:animation="@drawable/$ic_tag_arrow_up_anim__1"/>
+    <target android:name="path_middle" android:animation="@drawable/$ic_tag_arrow_up_anim__2"/>
+    <target android:name="path_bottom" android:animation="@drawable/$ic_tag_arrow_up_anim__3"/>
+</animated-vector>

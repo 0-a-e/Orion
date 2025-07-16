@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainCircleViewSize">320dp</dimen>
+    <dimen name="mainCoolHeatIndicatorTopMargin">64dp</dimen>
+    <dimen name="mainToggleBtnBottomMargin">12dp</dimen>
+    <dimen name="mainToggleBtnLeftMargin">24dp</dimen>
+    <dimen name="mainToggleBtnRightMargin">24dp</dimen>
+</resources>

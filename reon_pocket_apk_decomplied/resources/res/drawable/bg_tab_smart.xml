@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_enabled="false" android:drawable="0x7f0800f5"/>
+    <item>
+        <ripple android:color="@color/colorDefaultPressed">
+            <item android:id="@android:id/mask">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorBlack"/>
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle"/>
+            </item>
+        </ripple>
+    </item>
+</layer-list>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="mainview_smart_favorite_cool_step_array">
+        <item>Low Cool</item>
+        <item>Slightly Low Cool</item>
+        <item>Medium (Recommended)</item>
+        <item>Slightly High Cool</item>
+        <item>High Cool</item>
+    </array>
+    <array name="mainview_smart_favorite_warm_step_array">
+        <item>Low Warm</item>
+        <item>Slightly Low Warm</item>
+        <item>Medium (Recommended)</item>
+        <item>Slightly High Warm</item>
+        <item>High Warm</item>
+    </array>
+    <array name="user_info_age_array">
+        <item>Under 20</item>
+        <item>20-29</item>
+        <item>30-39</item>
+        <item>40-49</item>
+        <item>50-59</item>
+        <item>60 or over</item>
+        <item>Decline</item>
+    </array>
+    <array name="user_info_age_array_values">
+        <item>0-19</item>
+        <item>20-29</item>
+        <item>30-39</item>
+        <item>40-49</item>
+        <item>50-59</item>
+        <item>60-</item>
+        <item>Unknown</item>
+    </array>
+    <array name="user_info_height_array">
+        <item>Under 140 cm</item>
+        <item>140-144 cm</item>
+        <item>145-149 cm</item>
+        <item>150-154 cm</item>
+        <item>155-159 cm</item>
+        <item>160-164 cm</item>
+        <item>165-169 cm</item>
+        <item>170-174 cm</item>
+        <item>175-179 cm</item>
+        <item>180-184 cm</item>
+        <item>185-189 cm</item>
+        <item>190 cm or over</item>
+        <item>Decline</item>
+    </array>
+    <array name="user_info_height_array_values">
+        <item>0-139</item>
+        <item>140-144</item>
+        <item>145-149</item>
+        <item>150-154</item>
+        <item>155-159</item>
+        <item>160-164</item>
+        <item>165-169</item>
+        <item>170-174</item>
+        <item>175-179</item>
+        <item>180-184</item>
+        <item>185-189</item>
+        <item>190-</item>
+        <item>Unknown</item>
+    </array>
+    <array name="user_info_location_array">
+        <item>Hokkaido</item>
+        <item>Aomori</item>
+        <item>Iwate</item>
+        <item>Miyagi</item>
+        <item>Akita</item>
+        <item>Yamagata</item>
+        <item>Fukushima</item>
+        <item>Ibaraki</item>
+        <item>Tochigi</item>
+        <item>Gunma</item>
+        <item>Saitama</item>
+        <item>Chiba</item>
+        <item>Tokyo</item>
+        <item>Kanagawa</item>
+        <item>Niigata</item>
+        <item>Toyama</item>
+        <item>Ishikawa</item>
+        <item>Fukui</item>
+        <item>Yamanashi</item>
+        <item>Nagano</item>
+        <item>Gifu</item>
+        <item>Shizuoka</item>
+        <item>Aichi</item>
+        <item>Mie</item>
+        <item>Shiga</item>
+        <item>Kyoto</item>
+        <item>Osaka</item>
+        <item>Hyogo</item>
+        <item>Nara</item>
+        <item>Wakayama</item>
+        <item>Tottori</item>
+        <item>Shimane</item>
+        <item>Okayama</item>
+        <item>Hiroshima</item>
+        <item>Yamaguchi</item>
+        <item>Tokushima</item>
+        <item>Kagawa</item>
+        <item>Ehime</item>
+        <item>Kochi</item>
+        <item>Fukuoka</item>
+        <item>Saga</item>
+        <item>Nagasaki</item>
+        <item>Kumamoto</item>
+        <item>Oita</item>
+        <item>Miyazaki</item>
+        <item>Kagoshima</item>
+        <item>Okinawa</item>
+        <item>Decline</item>
+    </array>
+    <array name="user_info_location_array_values">
+        <item>Hokkaido</item>
+        <item>Aomori</item>
+        <item>Iwate</item>
+        <item>Miyagi</item>
+        <item>Akita</item>
+        <item>Yamagata</item>
+        <item>Fukushima</item>
+        <item>Ibaraki</item>
+        <item>Tochigi</item>
+        <item>Gunma</item>
+        <item>Saitama</item>
+        <item>Chiba</item>
+        <item>Tokyo</item>
+        <item>Kanagawa</item>
+        <item>Niigata</item>
+        <item>Toyama</item>
+        <item>Ishikawa</item>
+        <item>Fukui</item>
+        <item>Yamanashi</item>
+        <item>Nagano</item>
+        <item>Gifu</item>
+        <item>Shizuoka</item>
+        <item>Aichi</item>
+        <item>Mie</item>
+        <item>Shiga</item>
+        <item>Kyoto</item>
+        <item>Osaka</item>
+        <item>Hyogo</item>
+        <item>Nara</item>
+        <item>Wakayama</item>
+        <item>Tottori</item>
+        <item>Shimane</item>
+        <item>Okayama</item>
+        <item>Hiroshima</item>
+        <item>Yamaguchi</item>
+        <item>Tokushima</item>
+        <item>Kagawa</item>
+        <item>Ehime</item>
+        <item>Kochi</item>
+        <item>Fukuoka</item>
+        <item>Saga</item>
+        <item>Nagasaki</item>
+        <item>Kumamoto</item>
+        <item>Oita</item>
+        <item>Miyazaki</item>
+        <item>Kagoshima</item>
+        <item>Okinawa</item>
+        <item>Unknown</item>
+    </array>
+    <array name="user_info_weight_array">
+        <item>Under 30 kg</item>
+        <item>30-34 kg</item>
+        <item>35-39 kg</item>
+        <item>40-44 kg</item>
+        <item>45-49 kg</item>
+        <item>50-54 kg</item>
+        <item>55-59 kg</item>
+        <item>60-64 kg</item>
+        <item>65-69 kg</item>
+        <item>70-74 kg</item>
+        <item>75-79 kg</item>
+        <item>80-84 kg</item>
+        <item>85-89 kg</item>
+        <item>90-94 kg</item>
+        <item>95-99 kg</item>
+        <item>100 kg or over</item>
+        <item>Decline</item>
+    </array>
+    <array name="user_info_weight_array_values">
+        <item>0-29</item>
+        <item>30-34</item>
+        <item>35-39</item>
+        <item>40-44</item>
+        <item>45-49</item>
+        <item>50-54</item>
+        <item>55-59</item>
+        <item>60-64</item>
+        <item>65-69</item>
+        <item>70-74</item>
+        <item>75-79</item>
+        <item>80-84</item>
+        <item>85-89</item>
+        <item>90-94</item>
+        <item>95-99</item>
+        <item>100-</item>
+        <item>Unknown</item>
+    </array>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorSettingBg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/user_info_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/userInfoDescriptionTopMargin" android:paddingStart="@dimen/userInfoPageSidePadding" android:paddingEnd="@dimen/userInfoPageSidePadding">
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textColor="@color/colorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_description"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/userInfoListTopMargin">
+            <ViewStub android:id="@+id/genderItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/ageItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/heightItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/weightItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/addressItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

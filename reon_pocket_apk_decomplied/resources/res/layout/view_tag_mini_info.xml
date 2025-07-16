@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@color/B1" android:layout_width="match_parent" android:layout_height="@dimen/tagMiniHeight" android:elevation="@dimen/tagMiniViewElevationShadow">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/tag_mini_temp_layout" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/tag_image" android:layout_width="@dimen/tagMiniImageWidth" android:layout_height="@dimen/tagMiniImageHeight" android:src="0x7f0800e2"/>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp">
+                <ImageView android:layout_gravity="center" android:id="@+id/tag_temp_image" android:layout_width="@dimen/tagMiniTempImageHeight" android:layout_height="@dimen/tagMiniTempImageHeight" android:src="0x7f0800e3"/>
+                <TextView android:textStyle="bold" android:textColor="@color/C1" android:layout_gravity="center" android:id="@+id/message_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ー ℃" android:textAlignment="center" android:layoutDirection="ltr" style="@style/TagInfoMiniText"/>
+                <ImageView android:layout_gravity="right" android:id="@+id/tag_temp_anime" android:visibility="invisible" android:layout_width="@dimen/tagMiniTempImageHeight" android:layout_height="@dimen/tagMiniTempImageHeight" app:srcCompat="@drawable/ic_tag_arrow_up_anim"/>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/dividing_line" android:layout_width="24dp" android:layout_height="24dp">
+                <ImageView android:id="@+id/dividing_line_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="0x7f0800e1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:id="@+id/tag_humi_image" android:layout_width="@dimen/tagMiniHumiImageHeight" android:layout_height="@dimen/tagMiniHumiImageHeight" android:src="0x7f0800df"/>
+                <TextView android:textStyle="bold" android:textColor="@color/C1" android:layout_gravity="center" android:id="@+id/message_humi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ー ％" android:textAlignment="center" android:layoutDirection="ltr" style="@style/TagInfoMiniText"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/tag_humi_anime" android:visibility="invisible" android:layout_width="@dimen/tagMiniHumiImageHeight" android:layout_height="@dimen/tagMiniHumiImageHeight" app:srcCompat="@drawable/ic_tag_arrow_down_anim"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/tag_error_layout" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/error_layout_tag_image" android:layout_width="@dimen/tagMiniImageWidth" android:layout_height="@dimen/tagMiniImageHeight" android:src="0x7f0800e2"/>
+            <TextView android:textStyle="bold" android:textColor="@color/C1" android:layout_gravity="center" android:id="@+id/status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tag_not_received" android:textAlignment="center" android:layout_marginStart="8dp" style="@style/TagInfoMiniText"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

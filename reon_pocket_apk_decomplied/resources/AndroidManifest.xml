@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="60" android:versionName="2.0.0" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" android:requiredSplitTypes="base__density" android:splitTypes="" package="jp.co.sony.reonpocket" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="34"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" android:required="false"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" android:required="false"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="10000"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <permission android:name="jp.co.sony.reonpocket.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="jp.co.sony.reonpocket.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="jp.co.sony.reonpocket.ReonPocketApplication" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="false" android:resizeableActivity="false" android:roundIcon="@mipmap/ic_launcher" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:name="jp.co.sony.reonpocket.modules.splash.view.SplashActivity" android:exported="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="jp.co.sony.reonpocket.modules.pairing.view.PairingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.connect.view.ConnectionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.main.view.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="locale|screenLayout|uiMode|screenSize|layoutDirection|fontScale"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.settings.view.SettingActivity" android:exported="false" android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <data android:scheme="http" android:host="twitter.com"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="jp.co.sony.reonpocket.modules.quickMode.view.QuickLaunchActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.initialize.view.InitializeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.deviceInfo.view.DeviceInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.autoStart.view.AutoStartActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.locationSetting.view.LocationSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.tagInfo.view.TagInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="jp.co.sony.reonpocket.modules.tagRegister.view.TagRegisterActivity" android:exported="false"/>
+        <activity android:name="jp.co.sony.reonpocket.connection.log.logcat.LogCatLogActivity" android:exported="false"/>
+        <service android:name="jp.co.sony.reon.android.ble.service.BleService" android:exported="false"/>
+        <service android:name="jp.co.sony.reonpocket.connection.ble.dfu.DfuService" android:exported="false">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService" android:enabled="true"/>
+        <service android:name="jp.co.sony.reonpocket.connection.log.service.DeviceLogService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="jp.co.sony.reonpocket.connection.log.service.OnClearFromRecentService" android:stopWithTask="false"/>
+        <receiver android:name="jp.co.sony.reonpocket.util.service.TimeActionNotificationReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="TIMER_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="jp.co.sony.reonpocket.util.service.LaunchApplicationNotificationService" android:exported="false" android:stopWithTask="false" android:foregroundServiceType="10">
+            <intent-filter>
+                <action android:name="TIMER_ACTION"/>
+            </intent-filter>
+        </service>
+        <service android:name="jp.co.sony.reonpocket.data.interactor.FirebaseCloudMessageService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="jp.co.sony.reonpocket.connection.log.logcat.LogCatLoggingService" android:exported="false" android:foregroundServiceType="10"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="jp.co.sony.reonpocket.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:name="org.altbeacon.beacon.startup.StartupBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:label="beacon" android:name="org.altbeacon.beacon.service.BeaconService" android:enabled="true" android:exported="false" android:isolatedProcess="false"/>
+        <service android:name="org.altbeacon.beacon.BeaconIntentProcessor" android:enabled="true" android:exported="false"/>
+        <service android:name="org.altbeacon.beacon.service.ScanJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <meta-data android:name="immediateScanJobId" android:value="208352939"/>
+            <meta-data android:name="periodicScanJobId" android:value="208352940"/>
+        </service>
+        <service android:name="org.altbeacon.bluetooth.BluetoothTestJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <meta-data android:name="jobId" android:value="1799803768"/>
+        </service>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="jp.co.sony.reonpocket.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.PlayCore.Transparent" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

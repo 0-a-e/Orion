@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/quickLaunchPreferenceSwitchItemHeight">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/quickLaunchPreferenceTextContentUpBottomMargin" android:layout_marginBottom="@dimen/quickLaunchPreferenceTextContentUpBottomMargin" android:layout_weight="1" android:paddingStart="@dimen/quickLaunchPreferenceSwitchItemPadding" android:paddingEnd="@dimen/quickLaunchPreferenceSwitchItemPadding">
+        <LinearLayout android:gravity="left|center_vertical|center_horizontal|center|start" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginEnd="@dimen/quickLaunchPreferenceTextContentRightMargin">
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="@dimen/switchItemTitleTextSize" android:textColor="@color/colorPrimaryText" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/listTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="@dimen/switchItemSubtitleTextSize" android:textColor="@color/colorSecondaryText" android:layout_gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/listSubTitle" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Switch android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/listSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

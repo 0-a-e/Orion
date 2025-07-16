@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:id="@+id/contentFrame" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@+id/fragment_container" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </androidx.core.widget.NestedScrollView>
+    <jp.co.sony.reonpocket.view.TagMiniInfoView android:id="@+id/tag_mini_info" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

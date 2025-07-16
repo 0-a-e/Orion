@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/contentView" android:paddingTop="@dimen/informationLayoutTbPadding" android:paddingBottom="@dimen/informationLayoutTbPadding" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" android:paddingStart="@dimen/informationLayoutLrPadding" android:paddingEnd="@dimen/informationLayoutLrPadding">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/informationLrPadding" android:paddingEnd="@dimen/informationLrPadding" android:elevation="@dimen/informationLayoutElevation">
+        <jp.co.sony.reonpocket.view.CustomFontTextView android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" style="@style/NotificationTitle"/>
+        <androidx.core.widget.NestedScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginBottom="24dp" android:fillViewport="true" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <jp.co.sony.reonpocket.view.CustomFontTextView android:id="@+id/description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/informationBottomMargin" style="@style/NotificationDescription"/>
+                <jp.co.sony.reonpocket.view.CustomImageView android:layout_gravity="center_horizontal" android:id="@+id/image_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/informationBottomMargin" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <jp.co.sony.reonpocket.view.CustomFontButton android:layout_gravity="center" android:id="@+id/button_positive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp"/>
+        <jp.co.sony.reonpocket.view.CustomFontButton android:layout_gravity="center" android:id="@+id/button_negative" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" style="@style/Widget.MaterialComponents.Button.TextButton"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smart_cw_off_view_description_line_spacing_extra">4dp</dimen>
+    <dimen name="smart_cw_off_view_description_text_size">16sp</dimen>
+    <dimen name="smart_cw_off_view_title_text_size">20sp</dimen>
+    <dimen name="smart_off_view_description_line_spacing_extra">4dp</dimen>
+    <dimen name="smart_off_view_description_margin_tb">16dp</dimen>
+    <dimen name="smart_off_view_description_text_size">16sp</dimen>
+    <dimen name="smart_off_view_title_margin_tb">16dp</dimen>
+    <dimen name="smart_off_view_title_text_size">20sp</dimen>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarTheme" android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?attr/actionBarSize" app:title="@string/user_info_title"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/user_info_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/userInfoDescriptionTopMargin" android:paddingStart="@dimen/userInfoPageSidePadding" android:paddingEnd="@dimen/userInfoPageSidePadding" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+            <jp.co.sony.reonpocket.view.CustomFontTextView android:textColor="@color/colorPrimaryText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_info_description"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/userInfoListTopMargin" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/user_info_description">
+            <ViewStub android:id="@+id/genderItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/ageItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/heightItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/weightItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+            <ViewStub android:id="@+id/addressItemStub" android:layout="@layout/view_preference_list" android:layout_width="match_parent" android:layout_height="@dimen/listItemHeight"/>
+        </LinearLayout>
+        <jp.co.sony.reonpocket.view.CustomFontButton android:id="@+id/nextBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/userInfoButtonTopMargin" android:layout_marginBottom="@dimen/userInfoButtonBottomMargin" android:maxWidth="@dimen/welcomeButtonMaxWidth" android:text="@string/common_next" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

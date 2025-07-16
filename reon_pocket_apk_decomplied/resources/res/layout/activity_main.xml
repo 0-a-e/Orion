@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/main_content" android:background="@color/NewBasicBackground" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="80dp" android:outlineProvider="bounds">
+                <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:background="@color/colorTransparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="0dp" app:elevation="0dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_scrollFlags="4" app:title=""/>
+                </com.google.android.material.appbar.AppBarLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <androidx.appcompat.widget.AppCompatImageButton android:id="@+id/action_setting" android:background="@color/colorTransparent" android:layout_width="48dp" android:layout_height="48dp" android:src="0x7f0800ee" android:contentDescription="@string/accessibility_setting"/>
+                    <jp.co.sony.reonpocket.view.CustomImageView android:id="@+id/action_auto_start" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp" android:src="0x7f0800aa" android:scaleType="fitCenter" android:contentDescription="@string/accessibility_auto_start_icon"/>
+                    <jp.co.sony.reonpocket.view.CustomImageView android:id="@+id/action_cooling" android:visibility="invisible" android:layout_width="48dp" android:layout_height="48dp" android:src="0x7f0800cd" android:scaleType="fitCenter" android:contentDescription="@string/accessibility_waste_heat"/>
+                    <jp.co.sony.reonpocket.view.CustomDebugStatusView android:orientation="vertical" android:id="@+id/status_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="right|center_vertical|center_horizontal|center|end" android:orientation="horizontal" android:id="@+id/device_info_layout" android:background="@color/colorTransparent" android:layout_width="80dp" android:layout_height="56dp" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0">
+                    <jp.co.sony.reonpocket.view.CustomImageView android:id="@+id/action_plug" android:visibility="gone" android:layout_width="16dp" android:layout_height="32dp" android:src="@drawable/ic_usb" android:scaleType="fitCenter" android:layout_marginStart="2dp"/>
+                    <jp.co.sony.reonpocket.view.CustomImageView android:id="@+id/action_battery" android:focusable="true" android:layout_width="16dp" android:layout_height="32dp" android:src="0x7f0800b2" android:scaleType="fitCenter" android:layout_marginStart="2dp"/>
+                    <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="10dp" android:gravity="bottom" android:id="@+id/action_battery_remain" android:focusable="true" android:layout_width="wrap_content" android:layout_height="32dp" android:scaleType="fitCenter" android:layout_marginStart="2dp"/>
+                    <View android:layout_width="16dp" android:layout_height="0dp"/>
+                </LinearLayout>
+                <jp.co.sony.reonpocket.view.CustomImageView android:id="@+id/action_battery_full" android:visibility="invisible" android:layout_width="24dp" android:layout_height="10dp" android:src="0x7f080119" android:scaleType="fitCenter" android:layout_marginEnd="12dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:weightSum="100">
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="8"/>
+                <com.google.android.material.tabs.TabLayout android:id="@+id/tabs" android:background="@color/colorTransparent" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="84" app:tabIndicatorColor="#00000000" app:tabIndicatorHeight="@dimen/mainTabIndicatorHeight" app:tabSelectedTextColor="@color/colorWhite" app:tabTextAppearance="@style/MainTabText" app:tabTextColor="@color/colorWhiteSelected"/>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="8"/>
+            </LinearLayout>
+            <jp.co.sony.reonpocket.view.CustomViewPager android:id="@+id/container" android:background="@color/NewBasicBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            <View android:background="@color/HelpGuideBorder" android:layout_width="match_parent" android:layout_height="@dimen/tagMiniSeparatorHeight"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:id="@+id/device_temp_view" android:background="@color/B1" android:layout_width="88dp" android:layout_height="72dp">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="56dp" android:layout_height="48dp" android:contentDescription="@string/accessibility_device_information" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+                        <jp.co.sony.reonpocket.view.CustomImageView android:id="@+id/action_device" android:layout_width="match_parent" android:layout_height="match_parent" android:src="0x7f0800bf" android:scaleType="fitCenter"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <View android:background="#999999" android:layout_width="1dp" android:layout_height="match_parent"/>
+                <FrameLayout android:id="@+id/tag_mini_info_wrap" android:background="@color/B1" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <jp.co.sony.reonpocket.view.TagMiniInfoView android:id="@+id/tag_mini_info" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/bottom_sheet" android:layout_width="match_parent" android:layout_height="wrap_content" app:behavior_peekHeight="0dp" app:layout_behavior="jp.co.sony.reonpocket.util.LockableBottomSheetBehavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

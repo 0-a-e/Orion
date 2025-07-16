@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorSettingBg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingSectionTopMargin">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/reon_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/feedback_container" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingSectionTopMargin">
+        <include android:id="@+id/user_feedback_layout" layout="@layout/view_preference_setting_list_item"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingSectionTopMargin">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/operation_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingSectionTopMargin">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/app_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingSectionTopMargin">
+        <ViewStub android:id="@+id/item_change_user_info" android:layout="@layout/view_preference_setting_list_item" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <jp.co.sony.reonpocket.view.CustomFontTextView android:textSize="12sp" android:textColor="@color/SecondaryText" android:id="@+id/twitter_description" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+</LinearLayout>

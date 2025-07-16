@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:background="@drawable/bg_toast" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="13dp" android:elevation="@dimen/mainToastElevation">
+        <TextView android:textSize="@dimen/mainToastTextSize" android:textColor="@color/color_primary_text" android:id="@+id/toast_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mainToastTopBotMargin" android:layout_marginBottom="@dimen/mainToastTopBotMargin" android:maxLines="5" android:layout_marginStart="@dimen/mainToastLrMargin" android:layout_marginEnd="@dimen/mainToastLrMargin"/>
+    </LinearLayout>
+</LinearLayout>
